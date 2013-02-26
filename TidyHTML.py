@@ -27,7 +27,7 @@ class TidyHtmlCommand(sublime_plugin.TextCommand):
                     cmdToRun.append(option[key])
 
         #limited to html files
-        if len(self.view.file_name()) > 0 and self.view.file_name().endswith((".html", ".htm")):
+        if len(self.view.file_name()) > 0 and self.view.file_name().endswith((".html", ".htm", "erb")):
 
             folder_name, file_name = os.path.split(self.view.file_name())
             cmdToRun.append(file_name)
